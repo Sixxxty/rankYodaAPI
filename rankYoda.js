@@ -16,6 +16,9 @@ request('https://shadowarena.pearlabyss.com/en-US/Arena?battleType=0&server=sa',
 	for(var i = 0; i <ranks.length; i++){
 		if(ranks[i] === "YoDaSL"){
 			let rankYo = i+1
+			app.listen(PORT,()=>{
+				console.log("Escutando")
+			})
 			app.get('/', (req, res) => {
 				res.json({
 					msg: "YoDa está top", rankYo
@@ -25,6 +28,7 @@ request('https://shadowarena.pearlabyss.com/en-US/Arena?battleType=0&server=sa',
 			break
 		}
 	}
+
 
 });
 

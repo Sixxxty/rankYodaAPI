@@ -21,7 +21,7 @@ request('https://shadowarena.pearlabyss.com/en-US/Arena?battleType=0&server=sa',
 			})
 			app.get('/', (req, res) => {
 				res.json({
-					msg:"Yoda está top: ",rankYo
+					value:"Yoda está top: ",rankYo
 				}
 					
 				)

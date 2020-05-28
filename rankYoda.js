@@ -16,12 +16,13 @@ request('https://shadowarena.pearlabyss.com/en-US/Arena?battleType=0&server=sa',
 	});
 	for(var i = 0; i <ranks.length; i++){
 		if(ranks[i] === "YoDaSL"){
-			shell.exec("heroku restart -a api-rankyoda")
+			
 			let rankYo = i+1
 			app.listen(PORT,()=>{
 				console.log("Escutando")
 			})
 			app.get('/', (req, res) => {
+				shell.exec("heroku restart -a api-rankyoda")
 				res.send(`Yoda está atualmente top: ${rankYo}# do servidor BR!`)
 					
 				

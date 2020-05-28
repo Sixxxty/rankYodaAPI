@@ -22,7 +22,7 @@ request('https://shadowarena.pearlabyss.com/en-US/Arena?battleType=0&server=sa',
 				console.log("Escutando")
 			})
 			app.get('/', (req, res) => {
-				shell.exec("heroku restart -a api-rankyoda")
+				shell.exec("restart -a api-rankyoda")
 				res.send(`Yoda está atualmente top: ${rankYo}# do servidor BR!`)
 					
 				

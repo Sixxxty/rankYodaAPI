@@ -20,7 +20,7 @@ request('https://shadowarena.pearlabyss.com/en-US/Arena?battleType=0&server=sa',
 				console.log("Escutando")
 			})
 			app.get('/', (req, res) => {
-				res.send("Top 7")
+				res.send(`Top: ${rankYo}`)
 					
 				
 					

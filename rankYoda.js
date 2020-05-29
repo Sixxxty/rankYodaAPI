@@ -3,6 +3,9 @@ var cheerio = require('cheerio')
 const express = require("express")
 const app = express()
 const PORT = process.env.PORT || 8000
+app.get('/about', (req, res) => {
+	res.send('Criador da api: Caio felix')
+})
 
 let ranks = [];
 	request('https://shadowarena.pearlabyss.com/en-US/Arena?battleType=0&server=sa',function( err, res, body){

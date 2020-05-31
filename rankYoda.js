@@ -21,7 +21,7 @@ let ranks = [];
 		for(var i = 0; i <ranks.length; i++){
 		if(ranks[i] === "YoDaSL"){
 			let rankYo = i+1	
-			res.send(`Yoda está atualmente top: ${rankYo}# com ${pontos} pontos!`)
+			res.send(`Yoda está atualmente top: ${rankYo}#`)
 			break}}
 		
 	

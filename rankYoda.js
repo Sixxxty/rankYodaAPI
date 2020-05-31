@@ -8,14 +8,11 @@ app.get('/about', (req, res) => {
 })
 
 let ranks = [];
-let points = [];
 	request('https://shadowarena.pearlabyss.com/en-US/Arena?battleType=0&server=sa',function( err, res, body){
 	if(err) console.log('Erro: ' + err);
 	var $ = cheerio.load(body);
 	$('.box_list_area').each(function(){
 		var name = $(this).find('.thum_name').text()
-		var point = $(this).find('.thum_point').text()
-		points.push(point)
 		ranks.push(name)
 
 	});

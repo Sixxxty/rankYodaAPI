@@ -6,9 +6,7 @@ const PORT = process.env.PORT || 8000
 app.get('/about', (req, res) => {
 	res.send('Feita para YoDaSL, por Caio Felix, Twitch:ythezack')
 })
-var url_string = window.location.href
-var url = new URL(url_string)
-var nickname = url.searchParams.get('')
+
 
 let ranks = [];
 	request('https://shadowarena.pearlabyss.com/en-US/Arena?battleType=0&server=sa',function( err, res, body){
